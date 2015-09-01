@@ -100,4 +100,9 @@ class ProGateway extends AbstractGateway
     {
         return $this->createRequest('\Omnipay\Payflow\Message\GetExpressCheckout', $parameters);
     }
+
+    public function doExpressCheckout(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\Payflow\Message\DoExpressCheckout', $parameters);
+    }
 }
