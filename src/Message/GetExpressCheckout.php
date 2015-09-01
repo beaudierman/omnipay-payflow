@@ -8,7 +8,7 @@ class GetExpressCheckout extends SetExpressCheckout {
 
 	public function getData()
 	{
-		$this->validate('amount', 'returnUrl', 'cancelUrl');
+		$this->validate('TENDER', 'TOKEN');
 
 		$data = $this->getBaseData();
 		$data['TENDER'] = 'P';
