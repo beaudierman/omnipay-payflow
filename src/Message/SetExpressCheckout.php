@@ -91,6 +91,26 @@ class SetExpressCheckout extends AbstractRequest {
 		return $this->setParameter('cancelUrl', $value);
 	}
 
+	public function getToken()
+	{
+		return $this->getParameter('token');
+	}
+
+	public function setToken($value)
+	{
+		return $this->setParameter('token', $value);
+	}
+
+	public function getPayerId()
+	{
+		return $this->getParameter('payerId');
+	}
+
+	public function setPayerId($value)
+	{
+		return $this->setParameter('payerId', $value);
+	}
+
 	protected function getBaseData()
 	{
 		$data = array();

@@ -10,7 +10,7 @@ class GetExpressCheckout extends SetExpressCheckout {
 	{
 		$data = $this->getBaseData();
 		$data['TENDER'] = 'P';
-		$data['TOKEN'] = $this->getTransactionId();
+		$data['TOKEN'] = $this->getToken() ? $this->getToken() : $this->httpRequest->query->get('token');
 
 		return $data;
 	}
